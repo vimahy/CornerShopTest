@@ -1,0 +1,16 @@
+<h1>You chose: </h1>
+
+{% block content %}
+    <div class="post">
+            <div class="date">
+                {{ order.date }}
+            </div>
+        <h2>{{ menu.created_at }}</h2>
+        <p>{{ order.dish|linebreaksbr }}</p>
+    </div>
+    <div>
+    <h3><a href="{% url 'order_edit' pk=order.pk  %}" >Change your dish</a></h3>
+</div>
+
+{% endblock %}
+

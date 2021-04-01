@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div>
+    <h1>Orders for today</a></h1>
+</div>
+
+
+
+{% for order in orders %}
+    <div>
+        <p> Dish: {{ order.dish }}</p>
+        <p>Ordered at: {{ order.created_at }}</p>
+    </div>
+
+
+<a href= '{{ order.id }}/delete/' >Delete</a>
+
+
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'menu_list' %}" >Back  to Menus</a>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div>
+    <h1>Menus</a></h1>
+</div>
+
+
+
+{% for menus in menus %}
+    <div>
+        <p> Name: {{ menus.name }}</p>
+<h2><a href=>{{ menu.name }}</a></h2>
+
+        <p>This menu was created at {{ menus.created_at }}</p>
+    </div>
+
+<a href= '{{ menus.id }}/edit/' >Edit Menu</a>&nbsp;
+<a href= '{{ menus.id }}/delete/' >Delete</a>&nbsp;
+<a href= '{{ menus.id }}/send/' >Send this menu</a>
+
+
+{% endfor %}
+<br>
+<br>
+<br>
+<br>
+<a href="{% url 'menu_new' %}" >Add a menu</a>
+
+
+
+</body>
+</html>

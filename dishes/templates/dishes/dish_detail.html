@@ -1,0 +1,18 @@
+  <h1>Details</h1>
+
+{% block content %}
+    <div class="post">
+            <div class="date">
+              Dish name:  {{ dish.name }}
+            </div>
+        <p>Dish created at {{ dish.created_at }}</p>
+
+    </div>
+    <div>
+</div>
+
+    <h3><a href="{% url 'dish_edit' pk=dish.pk  %}" >Edit this dish </a></h3>
+        <h3><a href="{% url 'menu_list'  %}" >Back to menu list </a></h3>
+        <h3><a href="{% url 'dish_new'  %}" >Add a dish </a></h3>
+
+{% endblock %}

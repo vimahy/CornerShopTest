@@ -1,0 +1,25 @@
+
+<h1>Details of    {{ menu.name }} </h1>
+
+{% block content %}
+    <div class="post">
+            <div class="date">
+              <h5>Menu created at  {{ menu.created_at }}</h5>
+            </div>
+       
+    
+    </div>
+
+    <div>
+    <h3><a href="{% url 'order_new' %}" >Order a dish</a></h3>
+</div> 
+   
+{% if user.is_authenticated %}
+    <div>
+    <h3><a href="{% url 'dish_new' %}" >Add a dish to this menu</a></h3>
+</div>
+  {% endif %}
+
+<a href="{% url 'order_new' %}" >Create an order</a>
+
+{% endblock %}

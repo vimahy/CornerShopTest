@@ -1,0 +1,15 @@
+{% block content %}
+
+The menu was sent
+    <div class="post">
+            <div class="date">
+                {{ menu.date }}
+            </div>
+        <h2>{{ menu.created_at }}</h2>
+        <p>{{ menu.name|linebreaksbr }}</p>
+    </div>
+    <div>
+    <h3><a href=/menu/ >Back to list</a></h3>
+</div>
+
+{% endblock %}
